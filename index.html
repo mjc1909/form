@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- JS -->
+   <script src="javascript/script.js" defer></script>
+</head>
+<body>
+    <h1>Opret profil</h1>
+    <form id="form-id">
+        <label>Fornavn
+            <input type="text" name="firstName" required minlength="2" maxlength="20">
+        </label>
+        <label>Efternavn
+            <input type="text" name="lastName" required minlength="2" maxlength="20">
+        </label>
+        <label>Alder
+            <input type="number" name="age" required maxlength="3">
+        </label>
+        <label>Email
+            <input type="text" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+        </label>
+        <div class="pass">
+            <label>Adgangskode <span class="pass-help">minimum 3 karakterer</span>
+                <input type="password" name="password" required minlength="3" autocomplete="off">
+            </label>
+            <label>Gentag Adgangskode
+                <input type="password" name="passwordRepeat" required minlength="3" autocomplete="off">
+            </label>
+        </div>
+
+        <input type="submit" name="submit" value="Opret Bruger" onclick="myFunction()">
+    </form>
+
+    <div class="msg"></div>
+
+    
+</body>
+</html>
